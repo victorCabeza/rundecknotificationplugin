@@ -1,6 +1,8 @@
-package com.plugin.rundecknotificationplugin
+package com.plugin.rundeck.notification.plugin
 
 import spock.lang.Specification
+
+import java.nio.Buffer
 
 class RundecknotificationpluginSpec extends Specification {
     //Some Possible trigger names
@@ -33,7 +35,7 @@ class RundecknotificationpluginSpec extends Specification {
     def "Post Notification basic success"() {
         given:
 
-        Rundecknotificationplugin plugin = new Rundecknotificationplugin();
+        HttpNotificationPlugin plugin = new HttpNotificationPlugin.Builder().build()
         //TODO: set additional properties for your plugin
         String trigger = TRIGGER_SUCCESS
 
